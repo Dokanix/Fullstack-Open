@@ -1,0 +1,12 @@
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over browser:
+browser adds the note
+to the current list of notes
+and rerenders the page
+end note
+
+note over server:
+server proccesses the note
+and adds it to current list
+of notes on the server
