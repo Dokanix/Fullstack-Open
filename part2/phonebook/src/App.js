@@ -54,11 +54,17 @@ const App = () => {
           setTimeout(() => setMessage(''), 2000);
         });
     } else {
-      services.create(newPerson).then((returnedPerson) => {
-        setPersons(persons.concat(returnedPerson));
-        setMessage(`Added ${returnedPerson.name} to Contacts`);
-        setTimeout(() => setMessage(''), 2000);
-      });
+      services
+        .create(newPerson)
+        .then((returnedPerson) => {
+          setPersons(persons.concat(returnedPerson));
+          setMessage(`Added ${returnedPerson.name} to Contacts`);
+          setTimeout(() => setMessage(''), 2000);
+        })
+        .catch((error) => {
+          setMessage(`${error.response.data.error}`);
+          setTimeout(() => setMessage(''), 2000);
+        });
     }
   };
 
