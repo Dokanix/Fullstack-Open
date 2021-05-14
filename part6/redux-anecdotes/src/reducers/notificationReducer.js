@@ -9,6 +9,8 @@ const reducer = (state = '', action) => {
   }
 };
 
+let timeoutId;
+
 export const set = (message, time) => {
   return (dispatch) => {
     dispatch({
@@ -16,7 +18,11 @@ export const set = (message, time) => {
       value: message,
     });
 
-    const id = setTimeout(() => {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+
+    timeoutId = setTimeout(() => {
       dispatch({
         type: 'CLEAR',
       });
