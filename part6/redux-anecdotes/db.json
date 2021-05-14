@@ -1,0 +1,34 @@
+{
+  "anecdotes": [
+    {
+      "content": "siemano",
+      "votes": 11,
+      "id": 9
+    },
+    {
+      "content": "nie widze problemu",
+      "votes": 1,
+      "id": 10
+    },
+    {
+      "content": "co tam",
+      "votes": 2,
+      "id": 11
+    },
+    {
+      "content": "halo",
+      "votes": 1,
+      "id": 12
+    },
+    {
+      "content": "siema",
+      "votes": 2,
+      "id": 13
+    },
+    {
+      "content": "siema",
+      "votes": 0,
+      "id": 14
+    }
+  ]
+}
